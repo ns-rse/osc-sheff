@@ -1,8 +1,103 @@
 ---
-title: "Template Revealjs Quarto site"
-format: revealjs
+title: "Open Scholarship Community Sheffield"
+subtitle: "Progress and Plans"
+format:
+  clean-revealjs:
+    incremental: true
+    theme: sky # solarized | dark | night | league | sky
+    slide-number: true
+    show-slide-number: speaker
+author:
+  - name: Neil Shephard
+    orcid: 0000-0001-8301-6857
+    email: n.shephard@sheffield.ac.uk
+    affiliations: RSE, University of Sheffield
+from: markdown+emoji
+date: last-modified
 ---
 
-This is a Quarto website.
+![[](https://osc-international.com/osc-sheffield/)](img/osc-sheffield.png)
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+## OSC Sheffield
+
+:::: {.columns}
+::: {.column width="50%"}
+**Vision**
+_An inclusive, supportive & active community for researchers to interact, share knowledge and encourage good working
+practices to normalise the values, transparency and culture of Open Scholarship._
+:::
+
+::: {.column width="50%"}
+* Interact
+* Share
+* Support
+* Mentor
+:::
+
+::::
+Describe the community what is the shared purpose of the community and who is it for? What is it people can gain by
+joining your community. Include information from Missin and Vision, Community Engagement Plan and Communication Plan.
+
+::: {.notes}
+The Open Scholarship Community Sheffield vision is to be an inclusive, supportive and active community for researchers
+to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of
+Open Scholarship
+:::
+
+## Current Status
+
+* :white_check_mark: Logo
+* :white_check_mark: Core Team
+* :white_check_mark: OSC Website
+* :white_check_mark: Launch Event
+* Initial Members
+* Community Activities
+
+::: {.notes}
+We have customised the logo and as you may have noticed opted for Scholarship over Science with an eye on inclusivity as
+we did not want the Arts & Humanities or Library departments to feel excluded.
+
+I've reached out to the Open Research Working Group which includes members of staff from across all faculties who are
+already engaged in Open Scholarship to ask if anyone is interested in being a core member. Out of 14 respondents from
+all faculties all but the Faculty of Science have someone willing to be a core member and point of contact in the
+Faculty.
+
+We have setup an OSC Website with the help of Ron XXX and Loek.
+
+University of Sheffield ran its inaugural OpenFest event for the first time in 2022 and it returns this year in
+September. I've been working with Jenni Adams, the Open Research Manager lead in Library Services who is organising this
+event and is heavily involved in promoting Open Research at the University of Sheffield and she is very supportive and
+keen to be involved herself. This years event runs over four days with the first being in person and will close with
+a presentation from me Open Scholarship Community Sheffield inviting attendees to join the community (it aligns nicely
+with drinks and socialising).
+
+With Jenni's support and input we have a number of events planned already.
+:::
+
+## Up-coming Events
+
+1. Launch OSC Sheffield at [OpenFest2023](https://www.sheffield.ac.uk/library/research/open-research/openfest2023) 2023-09-07.
+2. Open Conversation
+3. [Quarto](https://quarto.org) for literate and reproducible documents
+4. Rejuvenate [ReproducibiliTea Sheffield](https://reproducibilitea.org/#Sheffield).
+
+::: {.notes}
+As mentioned there is the launch event happening at OpenFest2023
+Jenni Adams runs Open Conversation events regularly and there is one scheduled for Autumn on XXX
+
+The Open Research Working Group has monthly Drop-in sessions but these are poorly attended so we will be trying to
+rejuvinate these by adding more structure
+:::
+
+
+## Lessons Learned
+
+1.
+2.
+3.
+
+::: {.notes}
+:::
+
+## Invitation to Kick-off Meeting
