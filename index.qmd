@@ -4,7 +4,7 @@ subtitle: "Progress and Plans"
 format:
   clean-revealjs:
     incremental: true
-    theme: sky # solarized | dark | night | league | sky
+    # theme: sky # solarized | dark | night | league | sky
     slide-number: true
     show-slide-number: speaker
 author:
@@ -15,6 +15,11 @@ author:
 from: markdown+emoji
 date: last-modified
 ---
+```{r, setup}
+library(reticulate)
+library(tidyverse)
+```
+
 
 ![[](https://osc-international.com/osc-sheffield/)](img/osc-sheffield.png)
 
@@ -24,11 +29,14 @@ date: last-modified
 :::: {.columns}
 ::: {.column width="50%"}
 **Vision**
+
 _An inclusive, supportive & active community for researchers to interact, share knowledge and encourage good working
 practices to normalise the values, transparency and culture of Open Scholarship._
 :::
 
 ::: {.column width="50%"}
+**Mission**
+
 * Interact
 * Share
 * Support
@@ -36,13 +44,16 @@ practices to normalise the values, transparency and culture of Open Scholarship.
 :::
 
 ::::
+
+::: {.notes}
 Describe the community what is the shared purpose of the community and who is it for? What is it people can gain by
 joining your community. Include information from Missin and Vision, Community Engagement Plan and Communication Plan.
 
-::: {.notes}
 The Open Scholarship Community Sheffield vision is to be an inclusive, supportive and active community for researchers
 to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of
-Open Scholarship
+Open Scholarship.
+
+
 :::
 
 ## Current Status
@@ -51,8 +62,8 @@ Open Scholarship
 * :white_check_mark: Core Team
 * :white_check_mark: OSC Website
 * :white_check_mark: Launch Event
-* Initial Members
-* Community Activities
+* :white_check_mark: Community Activities
+* Initial Members (after launch)
 
 ::: {.notes}
 We have customised the logo and as you may have noticed opted for Scholarship over Science with an eye on inclusivity as
@@ -93,11 +104,109 @@ rejuvinate these by adding more structure
 
 ## Lessons Learned
 
-1.
-2.
+1. Communities don't self-organise.
+2. Policy and Infrastructure aren't enough
 3.
 
 ::: {.notes}
+
+What have I learned about Community development from the Incubator programmer?
+
+Probably the most important aspect I hadn't appreciated is that communities don't self-organise. That is particularly
+true when the target audience are drawn from diverse and often disparate groups who don't already interact. I perhaps
+naively thought that you just had to get people together, but without someone steering the boat and organising events
+that bring people together I can see that communities won't grow.
+
+Its all very well funders and institutions I hadn't given much thought to the technical barriers that people encounter
+when having to learn new skills to make their work reproducible. This is in part because I've always been self-motivated
+to try and learn new things about computing
 :::
 
 ## Invitation to Kick-off Meeting
+
+## Core Team Summary
+
+
+```{python}
+#| echo: false
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+BASE_DIR = Path.cwd()
+DATA_DIR = BASE_DIR / "data"
+
+RAW_DATA_DIR = DATA_DIR / "raw"
+CLEAN_DATA_DIR = DATA_DIR / "clean"
+
+raw_df = pd.read_csv(
+    RAW_DATA_DIR / "Open Scholarship Community Sheffield _ Core Team (Responses) - Form responses 1.csv"
+)
+
+
+# Tidy the data
+clean_df = raw_df.drop(columns=["Timestamp", "Email address"])
+clean_df.columns = ["interest", "events_attend", "events_run", "faculty", "department", "research_areas"]
+# Split Research areas
+research_areas = [
+    "Grant Applications",
+    "Open Access Publishing",
+    "Reproducible Research",
+    "Literate Programming",
+    "FAIR Principles",
+    "Open Source Software",
+    "Version Control",
+    "FAIR4RS Principles",
+    "DOI and Metadata",
+    "ORDA/Figshare",
+    "Open Frameworks (e.g. OpenScienceFramework, Octopus)",
+    "Science Communication beyond Academia",
+    "Inclusivity",
+    "ReproHacks",
+    "Pre-prints",
+    "Coproduction",
+    "Electronic Lab Notebooks",
+    "Other",
+]
+for research_area in research_areas:
+    clean_df[research_area] = np.where(clean_df["research_areas"].str.contains(research_area), True, False)
+clean_df.drop(columns=["research_areas"], inplace=True)
+binary_columns = ["interest", "events_attend", "events_run"]
+for x in binary_columns:
+    clean_df[x + "_binary"] = np.where(clean_df[x] == "Yes", True, False)
+
+# Tidy up Faculty
+tidy_faculty = {"Arts and Humanities": "Arts and Humanities",
+                "Central and Professional Services (e.g. Library, Research IT)": "Central &\nProfessional Services",
+                "Engineering": "Engineering",
+                "Medicine, Dentistry and Health": "Medicine,\nDentistry and Health",
+                "Social Sciences": "Social Sciences"}
+clean_df["faculty"] = clean_df["faculty"].map(tidy_faculty)
+
+# Write clean data
+clean_df.to_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
+respondents = clean_df.shape[0]
+core_members = clean_df[clean_df["interest_binary"] == True].shape[0]
+```
+
+`r py$respondents` respondents of which `r py$core_members` (`r (py$core_members / py$respondents) * 100`%)
+
+```{python}
+#| echo: false
+faculty_all = clean_df[["interest", "faculty"]].groupby("faculty").count()
+faculty_all.columns = ["Respondants"]
+faculty_interested = clean_df[clean_df["interest_binary"] == True][["interest", "faculty"]].groupby("faculty").count()
+faculty_interested.columns = ["Core Members"]
+faculty = pd.merge(faculty_all, faculty_interested, on="faculty")
+faculty.index.name = "Faculty"
+faculty.loc["Science"] = [1, 0]
+fig, ax = plt.subplots()
+x_axis_labels = list(faculty.index)
+x_axis_labels = [l if not i%2 else "\n"+l for i, l in enumerate(x_axis_labels)]
+
+faculty.plot.bar(rot=0, ax=ax)
+ax.set_xticklabels(x_axis_labels)
+plt.show()
+```
