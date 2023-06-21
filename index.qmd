@@ -37,23 +37,22 @@ practices to normalise the values, transparency and culture of Open Scholarship.
 ::: {.column width="50%"}
 **Mission**
 
-* Interact
 * Share
 * Support
 * Mentor
+* Interact
+* Collaborate
 :::
 
 ::::
 
 ::: {.notes}
-Describe the community what is the shared purpose of the community and who is it for? What is it people can gain by
-joining your community. Include information from Missin and Vision, Community Engagement Plan and Communication Plan.
-
 The Open Scholarship Community Sheffield vision is to be an inclusive, supportive and active community for researchers
 to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of
 Open Scholarship.
 
-
+We aim to develop and share knowledge and good Open Research practices that foster, enable, and encourage anyone in
+Sheffield to Undertake Ooen Research
 :::
 
 ## Current Status
@@ -129,7 +128,9 @@ Open Research.
 
 My background of scientific research and computing means I'm quite naive when it comes to more qualitative research such
 as those in the Arts an Humanities, but researchers in these can and should be encouraged to undertake Open
-Research. Its possible for data sources to be made available under the FAIR principles.
+Research. But it is possible for data sources to be made available under the FAIR principles using resources such as
+figshare to make data and generate Digital Object Identifiers available, careful consideration can be given to the data
+formats in which study material are collected, stored and curated.
 :::
 
 ## Invitation to Kick-off Meeting
