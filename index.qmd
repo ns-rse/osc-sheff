@@ -59,7 +59,7 @@ Sheffield to Undertake Ooen Research
 
 * :white_check_mark: Logo
 * :white_check_mark: Core Team
-* :white_check_mark: OSC Website
+* :white_check_mark: [OSC Website](https://osc-international.com/osc-sheffield/)
 * :white_check_mark: Launch Event
 * :white_check_mark: Community Activities
 * Initial Members (after launch)
@@ -135,17 +135,18 @@ formats in which study material are collected, stored and curated.
 
 ## Invitation to Kick-off Meeting
 
-:::: {.columns}
-::: {.column width="50%"}
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="50%"} -->
 
-![[](https://www.sheffield.ac.uk/library/research/open-research/openfest2023)](https://www.sheffield.ac.uk/sites/default/files/styles/two_thirds_1x/public/2023-03/OpenFest%20logo%20%283%29.jpeg.jpg?itok=BqBocLJA)
-:::
+<!-- ![[](https://www.sheffield.ac.uk/library/research/open-research/openfest2023)](https://www.sheffield.ac.uk/sites/default/files/styles/two_thirds_1x/public/2023-03/OpenFest%20logo%20%283%29.jpeg.jpg?itok=BqBocLJA) -->
+<!-- ::: -->
 
-::: {.column width="50%"}
+<!-- ::: {.column width="50%"} -->
 {{< qrcode https://www.sheffield.ac.uk/library/research/open-research/openfest2023 >}}
-:::
+[Sheffield OpenFest2023](https://www.sheffield.ac.uk/library/research/open-research/openfest2023)
+<!-- ::: -->
 
-::::
+<!-- :::: -->
 
 ::: {.notes}
 
