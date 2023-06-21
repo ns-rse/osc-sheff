@@ -69,9 +69,10 @@ We have customised the logo and as you may have noticed opted for Scholarship ov
 we did not want the Arts & Humanities or Library departments to feel excluded.
 
 I've reached out to the Open Research Working Group which includes members of staff from across all faculties who are
-already engaged in Open Scholarship to ask if anyone is interested in being a core member. Out of 14 respondents from
-all faculties all but the Faculty of Science have someone willing to be a core member and point of contact in the
-Faculty.
+already engaged in Open Scholarship to ask if anyone is interested in being a core member. Out of 14 respondents 12 were
+willing to be involved as core members and these represent all but the Science faculty so we'll need to do a bit more
+work to reach out and find someone interested there. We also have a PhD student who is keen to be involved to represent
+Postgraduate Researchers in the community.
 
 We have setup an OSC Website with the help of Ron XXX and Loek.
 
@@ -80,6 +81,9 @@ September. I've been working with Jenni Adams, the Open Research Manager lead in
 event and she is very supportive and keen to be involved in the Open Scholarship Community. This years event runs over
 four days with the first being in person and will close with a presentation from me on Open Communities and inviting
 attendees.
+
+I've also submitted an application for funding from Research Englands Culture funding call this year to fund some of my
+time and future events.
 :::
 
 ## Up-coming Events
@@ -88,6 +92,7 @@ attendees.
 2. [Open Conversation](https://staff.sheffield.ac.uk/events/open-research-conversation) - TBC
 3. [Quarto](https://quarto.org) for literate and reproducible documents
 4. Rejuvenate [ReproducibiliTea Sheffield](https://reproducibilitea.org/#Sheffield).
+5. [Reprohack](https://www.reprohack.org/) - early 2024 (subject to funding).
 
 ::: {.notes}
 
@@ -100,7 +105,13 @@ but past sessions have included Opening up Ethnography, You've Got to Fight for 
 Policies on Rights Retention.
 
 The Open Research Working Group has monthly Drop-in sessions but these are poorly attended so we will be trying to
-rejuvinate these by adding more structure
+rejuvinate these by adding more structure and I was planning on presenting or demonstrating using Quarto for literate
+and reproducible research.
+
+I've been in touch with those who have organised ReproducibiliTea Sheffield in the past about rejuvenating these journal
+clubs and they are keen and I'll be working with them over the coming months to get those back up and running.
+
+If the funding bid to Research England is successful we'll be running a Reprohack in early 2024.
 :::
 
 
@@ -117,7 +128,7 @@ What have I learned about Community development from the Incubator programmer?
 Probably the most important aspect I hadn't appreciated is that communities don't self-organise. That is particularly
 true when the target audience are drawn from diverse and often disparate groups who don't already interact. I perhaps
 naively thought that you just had to get people together, but without someone steering the boat and organising events
-that bring people together I can see that communities won't grow.
+that bring people together I can see that communities don't naturally coalesce and won't grow.
 
 Its all very well funders and institutions saying they are going to undertake Open Research but I hadn't given much
 thought to the technical barriers that people encounter when having to learn new skills to make their work
@@ -128,9 +139,9 @@ Open Research.
 
 My background of scientific research and computing means I'm quite naive when it comes to more qualitative research such
 as those in the Arts an Humanities, but researchers in these can and should be encouraged to undertake Open
-Research. But it is possible for data sources to be made available under the FAIR principles using resources such as
-figshare to make data and generate Digital Object Identifiers available, careful consideration can be given to the data
-formats in which study material are collected, stored and curated.
+Research. But it is possible to make data sources more Open and align with the FAIR principles by giving careful
+consideration to the formats data and other study materials are collected, stored and curated in, sharing these
+resources via tools such as Figshare and Zenodo to generate Digital Object Identifiers.
 :::
 
 ## Invitation to Kick-off Meeting
@@ -168,52 +179,53 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 CLEAN_DATA_DIR = DATA_DIR / "clean"
 
-raw_df = pd.read_csv(
-    RAW_DATA_DIR / "Open Scholarship Community Sheffield _ Core Team (Responses) - Form responses 1.csv"
-)
+# raw_df = pd.read_csv(
+#     RAW_DATA_DIR / "Open Scholarship Community Sheffield _ Core Team (Responses) - Form responses 1.csv"
+# )
 
 
-# Tidy the data
-clean_df = raw_df.drop(columns=["Timestamp", "Email address"])
-clean_df.columns = ["interest", "events_attend", "events_run", "faculty", "department", "research_areas"]
-# Split Research areas
-research_areas = [
-    "Grant Applications",
-    "Open Access Publishing",
-    "Reproducible Research",
-    "Literate Programming",
-    "FAIR Principles",
-    "Open Source Software",
-    "Version Control",
-    "FAIR4RS Principles",
-    "DOI and Metadata",
-    "ORDA/Figshare",
-    "Open Frameworks (e.g. OpenScienceFramework, Octopus)",
-    "Science Communication beyond Academia",
-    "Inclusivity",
-    "ReproHacks",
-    "Pre-prints",
-    "Coproduction",
-    "Electronic Lab Notebooks",
-    "Other",
-]
-for research_area in research_areas:
-    clean_df[research_area] = np.where(clean_df["research_areas"].str.contains(research_area), True, False)
-clean_df.drop(columns=["research_areas"], inplace=True)
-binary_columns = ["interest", "events_attend", "events_run"]
-for x in binary_columns:
-    clean_df[x + "_binary"] = np.where(clean_df[x] == "Yes", True, False)
+# # Tidy the data
+# clean_df = raw_df.drop(columns=["Timestamp", "Email address"])
+# clean_df.columns = ["interest", "events_attend", "events_run", "faculty", "department", "research_areas"]
+# # Split Research areas
+# research_areas = [
+#     "Grant Applications",
+#     "Open Access Publishing",
+#     "Reproducible Research",
+#     "Literate Programming",
+#     "FAIR Principles",
+#     "Open Source Software",
+#     "Version Control",
+#     "FAIR4RS Principles",
+#     "DOI and Metadata",
+#     "ORDA/Figshare",
+#     "Open Frameworks (e.g. OpenScienceFramework, Octopus)",
+#     "Science Communication beyond Academia",
+#     "Inclusivity",
+#     "ReproHacks",
+#     "Pre-prints",
+#     "Coproduction",
+#     "Electronic Lab Notebooks",
+#     "Other",
+# ]
+# for research_area in research_areas:
+#     clean_df[research_area] = np.where(clean_df["research_areas"].str.contains(research_area), True, False)
+# clean_df.drop(columns=["research_areas"], inplace=True)
+# binary_columns = ["interest", "events_attend", "events_run"]
+# for x in binary_columns:
+#     clean_df[x + "_binary"] = np.where(clean_df[x] == "Yes", True, False)
 
-# Tidy up Faculty
-tidy_faculty = {"Arts and Humanities": "Arts and Humanities",
-                "Central and Professional Services (e.g. Library, Research IT)": "Central &\nProfessional Services",
-                "Engineering": "Engineering",
-                "Medicine, Dentistry and Health": "Medicine,\nDentistry and Health",
-                "Social Sciences": "Social Sciences"}
-clean_df["faculty"] = clean_df["faculty"].map(tidy_faculty)
+# # Tidy up Faculty
+# tidy_faculty = {"Arts and Humanities": "Arts and Humanities",
+#                 "Central and Professional Services (e.g. Library, Research IT)": "Central &\nProfessional Services",
+#                 "Engineering": "Engineering",
+#                 "Medicine, Dentistry and Health": "Medicine,\nDentistry and Health",
+#                 "Social Sciences": "Social Sciences"}
+# clean_df["faculty"] = clean_df["faculty"].map(tidy_faculty)
 
-# Write clean data
-clean_df.to_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
+# # Write clean data
+# clean_df.to_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
+clean_df = pd.read_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
 respondents = clean_df.shape[0]
 core_members = clean_df[clean_df["interest_binary"] == True].shape[0]
 ```

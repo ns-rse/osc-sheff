@@ -1,0 +1,19 @@
+interest,events_attend,events_run,faculty,department,Grant Applications,Open Access Publishing,Reproducible Research,Literate Programming,FAIR Principles,Open Source Software,Version Control,FAIR4RS Principles,DOI and Metadata,ORDA/Figshare,"Open Frameworks (e.g. OpenScienceFramework, Octopus)",Science Communication beyond Academia,Inclusivity,ReproHacks,Pre-prints,Coproduction,Electronic Lab Notebooks,Other,interest_binary,events_attend_binary,events_run_binary
+Yes,Yes,Maybe,Social Sciences,Sheffield Methods Institute,False,False,True,False,False,False,True,False,False,True,False,False,False,False,False,False,False,False,True,True,False
+Yes,Yes,Yes,Engineering,Materials Science and Engineering,True,True,True,False,True,True,False,False,True,True,False,True,True,False,True,False,False,False,True,True,True
+Yes,Yes,Yes,"Central &
+Professional Services",IT Services---Research & Innovation IT,False,False,True,False,True,True,True,True,True,False,False,False,False,False,False,False,True,False,True,True,True
+Yes,Yes,Yes,Social Sciences,School of Architecture,False,True,True,False,True,False,False,False,False,False,False,False,False,True,True,False,False,False,True,True,True
+Yes,Yes,Maybe,"Medicine,
+Dentistry and Health",ScHARR,False,True,False,False,True,False,False,False,False,True,False,True,True,False,True,False,False,False,True,True,False
+Yes,Yes,Yes,Social Sciences,Urban Studies and Planning,True,True,True,False,False,False,False,False,True,False,False,True,False,False,False,False,True,False,True,True,True
+Yes,Yes,Yes,Engineering,Computer Science,True,False,True,True,True,True,True,True,True,False,False,True,True,True,True,False,False,False,True,True,True
+Maybe,Maybe,No,Social Sciences,Education and iHuman (an FSS SRI),False,True,False,False,False,False,False,False,False,True,False,False,True,False,False,True,False,False,False,False,False
+Yes,Yes,Maybe,"Central &
+Professional Services",,False,False,True,True,True,True,True,True,False,True,False,True,True,False,False,False,False,False,True,True,False
+No,No,No,Arts and Humanities,Music,True,True,False,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False
+Yes,Yes,Yes,Engineering,Materials Science,False,False,False,True,True,True,True,True,False,False,False,False,False,False,False,False,True,False,True,True,True
+Yes,Yes,Yes,"Central &
+Professional Services",Library,False,True,False,False,True,True,False,True,True,True,False,False,False,False,True,False,False,False,True,True,True
+Yes,Yes,Maybe,Arts and Humanities,School of East Asian Studies,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,True,False,False,True,True,False
+Yes,Yes,Yes,Social Sciences,Politics,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,True,True,True
