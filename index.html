@@ -7,10 +7,13 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.361">
 
-  <title>Open Scholarship Community Sheffield - Template Revealjs Quarto site</title>
+  <meta name="author" content="Neil Shephard">
+  <meta name="dcterms.date" content="2023-06-21">
+  <title>Open Scholarship Community Sheffield</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,18 +327,183 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Template Revealjs Quarto site</h1>
+  <h1 class="title">Open Scholarship Community Sheffield</h1>
+  <p class="subtitle">Progress and Plans</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Neil Shephard <a href="https://orcid.org/0000-0001-8301-6857" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:n.shephard@sheffield.ac.uk">n.shephard@sheffield.ac.uk</a>
+</div>
+        <p class="quarto-title-affiliation">
+            RSE, University of Sheffield
+          </p>
+    </div>
 </div>
 
+  <p class="date">June 21, 2023</p>
 </section>
-<section class="slide level2">
+<section id="osc-sheffield" class="slide level2">
+<h2>OSC Sheffield</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Vision</strong></p>
+<p><em>An inclusive, supportive &amp; active community for researchers to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of Open Scholarship.</em></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Mission</strong></p>
+<ul>
+<li class="fragment">Share</li>
+<li class="fragment">Support</li>
+<li class="fragment">Mentor</li>
+<li class="fragment">Interact</li>
+<li class="fragment">Collaborate</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>The Open Scholarship Community Sheffield vision is to be an inclusive, supportive and active community for researchers to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of Open Scholarship.</p>
+<p>We aim to develop and share knowledge and good Open Research practices that foster, enable, encourage and support anyone in the Sheffield region wishing to undertake or improve their Open Research practices.</p>
+<p>We encourage community interactions where those with experience meet with those wishing to learn. By sharing experience and acting as mentors it supports and encourages the adoption and normalisation of Open Research practices.</p>
+<p>Further interactions provide scope for and foster collaboration between individuals, groups, institutions and organisations and help improve transparency and openness in Research.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="current-status" class="slide level2">
+<h2>Current Status</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><span class="emoji" data-emoji="white_check_mark">✅</span> Logo</li>
+<li class="fragment"><span class="emoji" data-emoji="white_check_mark">✅</span> Core Team</li>
+<li class="fragment"><span class="emoji" data-emoji="white_check_mark">✅</span> <a href="https://osc-international.com/osc-sheffield/">OSC Website</a></li>
+<li class="fragment"><span class="emoji" data-emoji="white_check_mark">✅</span> Launch Event</li>
+<li class="fragment"><span class="emoji" data-emoji="white_check_mark">✅</span> Community Activities</li>
+<li class="fragment">Initial Members (after launch)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/osc-sheffield.png"></p>
+<figcaption><a href="https://osc-international.com/osc-sheffield/"></a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>We have customised the logo and as you may have noticed opted for Scholarship over Science with an eye on inclusivity as we did not want the Arts &amp; Humanities or Library departments to feel excluded.</p>
+<p>I’ve reached out to the Open Research Working Group which includes members of staff from across all faculties who are already engaged in Open Scholarship to ask if anyone is interested in being a core member. Out of 14 respondents 12 were willing to be involved as core members and these represent all but the Science faculty so we’ll need to do a bit more work to reach out and find someone interested there. We also have a PhD student who is keen to be involved to represent Postgraduate Researchers in the community.</p>
+<p>We have setup an OSC Website with the help of Ron XXX and Loek.</p>
+<p>University of Sheffield ran its inaugural OpenFest event for the first time in 2022 and it returns this year in September. I’ve been working with Jenni Adams, the Open Research Manager lead in Library Services who is organising this event and she is very supportive and keen to be involved in the Open Scholarship Community. This years event runs over four days with the first being in person and will close with a presentation from me on Open Communities and inviting attendees.</p>
+<p>I’ve also submitted an application for funding from Research Englands Culture funding call this year to fund some of my time and future events.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="up-coming-events" class="slide level2">
+<h2>Up-coming Events</h2>
+<ol type="1">
+<li class="fragment">Launch OSC Sheffield at <a href="https://www.sheffield.ac.uk/library/research/open-research/openfest2023">OpenFest2023</a> 2023-09-07.</li>
+<li class="fragment"><a href="https://staff.sheffield.ac.uk/events/open-research-conversation">Open Conversation</a> - TBC</li>
+<li class="fragment"><a href="https://quarto.org">Quarto</a> for literate and reproducible documents</li>
+<li class="fragment">Rejuvenate <a href="https://reproducibilitea.org/#Sheffield">ReproducibiliTea Sheffield</a>.</li>
+<li class="fragment"><a href="https://www.reprohack.org/">Reprohack</a> - early 2024 (subject to funding).</li>
+</ol>
+<aside class="notes">
+<p>With Jenni’s support and input we have a number of events planned already.</p>
+<p>Jenni already runs Open Conversation events which are regular seminars where researchers present their experience of undertaking different aspects of Open Research. Topics and presenters are currently being organised by Jenni for Autumn but past sessions have included Opening up Ethnography, You’ve Got to Fight for Your (Copy)right: An exploartion of New Policies on Rights Retention.</p>
+<p>The Open Research Working Group has monthly Drop-in sessions but these are poorly attended so we will be trying to rejuvinate these by adding more structure and I was planning on presenting or demonstrating using Quarto for literate and reproducible research.</p>
+<p>I’ve been in touch with those who have organised ReproducibiliTea Sheffield in the past about rejuvenating these journal clubs and they are keen and I’ll be working with them over the coming months to get those back up and running.</p>
+<p>If the funding bid to Research England is successful we’ll be running a Reprohack in early 2024.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lessons-learned" class="slide level2">
+<h2>Lessons Learned</h2>
+<ol type="1">
+<li class="fragment">Communities don’t self-organise.</li>
+<li class="fragment">Policy and Infrastructure aren’t enough.</li>
+<li class="fragment">Researchers in different areas have varying needs.</li>
+</ol>
+<aside class="notes">
+<p>What have I learned about Community development from the Incubator programmer?</p>
+<p>Probably the most important aspect I hadn’t appreciated is that communities don’t self-organise. That is particularly true when the target audience are drawn from diverse and often disparate groups who don’t already interact. I perhaps naively thought that you just had to get people together, but without someone steering the boat and organising events that bring people together I can see that communities don’t naturally coalesce and won’t grow.</p>
+<p>Its all very well funders and institutions saying they are going to undertake Open Research but I hadn’t given much thought to the technical barriers that people encounter when having to learn new skills to make their work reproducible. This is in part because I’ve always been self-motivated to try and learn new things about computing, but undertaking the Incubator Programme and more recently Carpentries training has made me realise that there is a lot that can be done to lessen the gradient of the learning curve when it comes to the digital literacy required to undertake Open Research.</p>
+<p>My background of scientific research and computing means I’m quite naive when it comes to more qualitative research such as those in the Arts an Humanities, but researchers in these can and should be encouraged to undertake Open Research. But it is possible to make data sources more Open and align with the FAIR principles by giving careful consideration to the formats data and other study materials are collected, stored and curated in, sharing these resources via tools such as Figshare and Zenodo to generate Digital Object Identifiers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="invitation-to-kick-off-meeting" class="slide level2">
+<h2>Invitation to Kick-off Meeting</h2>
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="50%"} -->
+<!-- ![[](https://www.sheffield.ac.uk/library/research/open-research/openfest2023)](https://www.sheffield.ac.uk/sites/default/files/styles/two_thirds_1x/public/2023-03/OpenFest%20logo%20%283%29.jpeg.jpg?itok=BqBocLJA) -->
+<!-- ::: -->
+<!-- ::: {.column width="50%"} -->
+<div id="qrcode" class="qrcode"></div>
+<script type="text/javascript">
+var qrcode = new QRCode("qrcode", {"width":128,"text":"https://www.sheffield.ac.uk/library/research/open-research/openfest2023","height":128,"colorLight":"#ffffff","colorDark":"#000000"});
+</script>
+    
+<p><a href="https://www.sheffield.ac.uk/library/research/open-research/openfest2023">Sheffield OpenFest2023</a> <!-- ::: --></p>
+<!-- :::: -->
+<aside class="notes">
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="core-team-summary" class="slide level2">
+<h2>Core Team Summary</h2>
+<p>14 respondents of which 12 (85.7142857%)</p>
 
-<div class="footer footer-default">
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
@@ -391,10 +559,10 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
+        showSlideNumber: 'speaker',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
@@ -550,6 +718,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
