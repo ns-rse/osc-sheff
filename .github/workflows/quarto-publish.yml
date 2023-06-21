@@ -7,10 +7,16 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      PKG_SYSREQS: false
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: dependencies on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get install -y make libicu-dev libxml2-dev libssl-dev pandoc librdf0-dev libnode-dev libcurl4-gnutls-dev
+      - name: Update
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
