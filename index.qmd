@@ -21,7 +21,6 @@ library(tidyverse)
 ```
 
 
-![[](https://osc-international.com/osc-sheffield/)](img/osc-sheffield.png)
 
 
 ## OSC Sheffield
@@ -57,12 +56,20 @@ Sheffield to Undertake Ooen Research
 
 ## Current Status
 
+:::: {.columns}
+::: {.column width="50%"}
 * :white_check_mark: Logo
 * :white_check_mark: Core Team
 * :white_check_mark: [OSC Website](https://osc-international.com/osc-sheffield/)
 * :white_check_mark: Launch Event
 * :white_check_mark: Community Activities
 * Initial Members (after launch)
+:::
+::: {.column width="50%"}
+![[](https://osc-international.com/osc-sheffield/)](img/osc-sheffield.png)
+:::
+
+::::
 
 ::: {.notes}
 We have customised the logo and as you may have noticed opted for Scholarship over Science with an eye on inclusivity as
@@ -225,7 +232,7 @@ CLEAN_DATA_DIR = DATA_DIR / "clean"
 
 # # Write clean data
 # clean_df.to_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
-clean_df = pd.read_csv(CLEAN_DATA_DIR / "cleaned_data.csv", index=False)
+clean_df = pd.read_csv(CLEAN_DATA_DIR / "cleaned_data.csv")
 respondents = clean_df.shape[0]
 core_members = clean_df[clean_df["interest_binary"] == True].shape[0]
 ```
