@@ -78,24 +78,27 @@ We have setup an OSC Website with the help of Ron XXX and Loek.
 
 University of Sheffield ran its inaugural OpenFest event for the first time in 2022 and it returns this year in
 September. I've been working with Jenni Adams, the Open Research Manager lead in Library Services who is organising this
-event and is heavily involved in promoting Open Research at the University of Sheffield and she is very supportive and
-keen to be involved herself. This years event runs over four days with the first being in person and will close with
-a presentation from me Open Scholarship Community Sheffield inviting attendees to join the community (it aligns nicely
-with drinks and socialising).
-
-With Jenni's support and input we have a number of events planned already.
+event and she is very supportive and keen to be involved in the Open Scholarship Community. This years event runs over
+four days with the first being in person and will close with a presentation from me on Open Communities and inviting
+attendees.
 :::
 
 ## Up-coming Events
 
 1. Launch OSC Sheffield at [OpenFest2023](https://www.sheffield.ac.uk/library/research/open-research/openfest2023) 2023-09-07.
-2. Open Conversation
+2. [Open Conversation](https://staff.sheffield.ac.uk/events/open-research-conversation) - TBC
 3. [Quarto](https://quarto.org) for literate and reproducible documents
 4. Rejuvenate [ReproducibiliTea Sheffield](https://reproducibilitea.org/#Sheffield).
 
 ::: {.notes}
-As mentioned there is the launch event happening at OpenFest2023
-Jenni Adams runs Open Conversation events regularly and there is one scheduled for Autumn on XXX
+
+With Jenni's support and input we have a number of events planned already.
+
+
+Jenni already runs Open Conversation events which are regular seminars where researchers present their experience of
+undertaking different aspects of Open Research. Topics and presenters are currently being organised by Jenni for Autumn
+but past sessions have included Opening up Ethnography, You've Got to Fight for Your (Copy)right: An exploartion of New
+Policies on Rights Retention.
 
 The Open Research Working Group has monthly Drop-in sessions but these are poorly attended so we will be trying to
 rejuvinate these by adding more structure
@@ -105,8 +108,8 @@ rejuvinate these by adding more structure
 ## Lessons Learned
 
 1. Communities don't self-organise.
-2. Policy and Infrastructure aren't enough
-3.
+2. Policy and Infrastructure aren't enough.
+3. Researchers in different areas have varying needs.
 
 ::: {.notes}
 
@@ -117,15 +120,37 @@ true when the target audience are drawn from diverse and often disparate groups 
 naively thought that you just had to get people together, but without someone steering the boat and organising events
 that bring people together I can see that communities won't grow.
 
-Its all very well funders and institutions I hadn't given much thought to the technical barriers that people encounter
-when having to learn new skills to make their work reproducible. This is in part because I've always been self-motivated
-to try and learn new things about computing
+Its all very well funders and institutions saying they are going to undertake Open Research but I hadn't given much
+thought to the technical barriers that people encounter when having to learn new skills to make their work
+reproducible. This is in part because I've always been self-motivated to try and learn new things about computing, but
+undertaking the Incubator Programme and more recently Carpentries training has made me realise that there is a lot that
+can be done to lessen the gradient of the learning curve when it comes to the digital literacy required to undertake
+Open Research.
+
+My background of scientific research and computing means I'm quite naive when it comes to more qualitative research such
+as those in the Arts an Humanities, but researchers in these can and should be encouraged to undertake Open
+Research. Its possible for data sources to be made available under the FAIR principles.
 :::
 
 ## Invitation to Kick-off Meeting
 
-## Core Team Summary
+:::: {.columns}
+::: {.column width="50%"}
 
+![[](https://www.sheffield.ac.uk/library/research/open-research/openfest2023)](https://www.sheffield.ac.uk/sites/default/files/styles/two_thirds_1x/public/2023-03/OpenFest%20logo%20%283%29.jpeg.jpg?itok=BqBocLJA)
+:::
+
+::: {.column width="50%"}
+{{< qrcode https://www.sheffield.ac.uk/library/research/open-research/openfest2023 >}}
+:::
+
+::::
+
+::: {.notes}
+
+:::
+
+## Core Team Summary
 
 ```{python}
 #| echo: false

@@ -30,7 +30,13 @@ jobs:
         with:
           r-version: '4.2.0'
 
-      - name: Install R Dependencies
+      - name: Install R package dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::rcmdcheck
+          needs: check
+
+      - name: Install R Packages
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
