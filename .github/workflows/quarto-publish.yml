@@ -7,8 +7,6 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    env:
-      PKG_SYSREQS: false
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
