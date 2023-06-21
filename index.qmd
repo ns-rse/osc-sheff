@@ -50,8 +50,14 @@ The Open Scholarship Community Sheffield vision is to be an inclusive, supportiv
 to interact, share knowledge and encourage good working practices to normalise the values, transparency and culture of
 Open Scholarship.
 
-We aim to develop and share knowledge and good Open Research practices that foster, enable, and encourage anyone in
-Sheffield to Undertake Ooen Research
+We aim to develop and share knowledge and good Open Research practices that foster, enable, encourage and support anyone
+in the Sheffield region wishing to undertake or improve their Open Research practices.
+
+We encourage community interactions where those with experience meet with those wishing to learn. By sharing experience
+and acting as mentors it supports and encourages the adoption and normalisation of Open Research practices.
+
+Further interactions provide scope for and foster collaboration between individuals, groups, institutions and
+organisations and help improve transparency and openness in Research.
 :::
 
 ## Current Status
